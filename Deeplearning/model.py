@@ -32,11 +32,11 @@ class  Neural_network:
 
     def  backprop (self):
 
-        #caculate  derivative of the loss function with respect to weights2 and weights1
+        #caculate  derivative of the loss function with respect to a_weight3 , a_weight2 and a_weight1
         a_weight3  =  np.dot(self.layer2.T  , 2*(self.y -  self.output)*calculate_z(self.output))
         a_weight2  =  np.dot(self.layer1.T,  (np.dot(2*(self.y - self.output) * calculate_z(self.output), self.weight3.T) * calculate_z(self.layer2)))
         a_weight1 = np.dot(self.input.T,  (np.dot(np.dot(2*(self.y - self.output) * calculate_z(self.output), self.weight3.T),self.weight2) * calculate_z(self.layer1)))
-        #update  weight1 anh weight2
+        #update  weight1 anh weight2 weight3
         self.weight3  += a_weight3
         self.weight2  += a_weight2
         self.weight1  +=a_weight1
@@ -69,4 +69,4 @@ for  i in range (1500):
 print("\n")
 print("W 1 :", NN.weight1.T)
 print("W 2 :", NN.weight2.T)
-print( "Perdict {1,76} : ",NN.Predict([2.1]))
+print( "Perdict {2.1} : ",NN.Predict([2.1]))
