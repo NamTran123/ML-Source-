@@ -11,10 +11,7 @@ def build_list_filename():
         listfilename.append(filename)
         return listfilename
 
-def  vetor_image(image):
-    return image.reshape(1,D)
 
-main()
 
 
 

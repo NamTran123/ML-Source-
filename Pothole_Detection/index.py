@@ -13,12 +13,12 @@ high_threshold = 150
 
 
 input_file = '/home/sink-all/Desktop/ML Source/Pothole_Detection/index4.jpg'
-input_file1 = '/home/sink-all/Desktop/ML Source/Pothole_Detection/index4.jpg'
+input_file1 = '/home/sink-all/Desktop/ML Source/Pothole_Detection/infonet_11.jpg'
 
 img = [input_file,input_file1]
 
 for  image  in img:
-    image = mpimg.imread(input_file)
+    image = mpimg.imread(input_file1)
     
     image3 = hp.gaussian_blur(image, kernel_size)
     plt.title('Gausian Image'), plt.xticks([]), plt.yticks([])
